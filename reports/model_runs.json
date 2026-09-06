@@ -1,0 +1,417 @@
+{
+  "notes": [
+    "The CLS Pooling, 2L, d_model=128, 4H, d_ff=512 run is reconstructed from historical terminal output. Epoch 1 is missing because the log starts from a resumed checkpoint after epoch 1.",
+    "The CLS Pooling, 2L, d_model=128, 4H, d_ff=512 configuration is inferred from the project README baseline.",
+    "The Mean Pooling, 4L, d_model=256, 8H, d_ff=1024 run is reconstructed from terminal output and the config used in that training session.",
+    "The full test metrics for CLS Pooling, 2L, d_model=128, 4H, d_ff=512 use runs/test_cls_d128_l2_h4_ff512.parquet. The terminal snippet for that model used --limit 1000 and reported accuracy=0.9590, so it is kept as a sample result rather than the final test-set score."
+  ],
+  "models": [
+    {
+      "name": "CLS Pooling, 2L, d_model=128, 4H, d_ff=512",
+      "config_source": "README.md",
+      "config": {
+        "text_context_size": 192,
+        "vocab_size": 30000,
+        "min_token_frequency": 2,
+        "model_dimension": 128,
+        "num_layers": 2,
+        "num_heads": 4,
+        "feed_forward_dimension": 512,
+        "dropout": 0.1,
+        "pooling": "cls",
+        "batch_size": 64,
+        "num_epochs": 8,
+        "learning_rate": 0.0005,
+        "weight_decay": 0.01,
+        "max_grad_norm": 1.0,
+        "validation_fraction": 0.1,
+        "seed": 561,
+        "optimizer": "AdamW",
+        "loss_function": "CrossEntropyLoss",
+        "device": "mps"
+      },
+      "train_history": [
+        {
+          "epoch": 2,
+          "train_loss": 0.0331,
+          "validation_loss": 0.063,
+          "validation_accuracy": 0.9849,
+          "validation_macro_f1": 0.9849,
+          "duration": "12:39"
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.0181,
+          "validation_loss": 0.0641,
+          "validation_accuracy": 0.9854,
+          "validation_macro_f1": 0.9854,
+          "duration": "21:44"
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.0103,
+          "validation_loss": 0.0767,
+          "validation_accuracy": 0.9841,
+          "validation_macro_f1": 0.9841,
+          "duration": "21:52"
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.0062,
+          "validation_loss": 0.0822,
+          "validation_accuracy": 0.9849,
+          "validation_macro_f1": 0.9849,
+          "duration": "2:00:08"
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.0046,
+          "validation_loss": 0.0957,
+          "validation_accuracy": 0.9843,
+          "validation_macro_f1": 0.9843,
+          "duration": "34:48"
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.0034,
+          "validation_loss": 0.1108,
+          "validation_accuracy": 0.9835,
+          "validation_macro_f1": 0.9835,
+          "duration": "1:49:38"
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.0033,
+          "validation_loss": 0.1027,
+          "validation_accuracy": 0.9843,
+          "validation_macro_f1": 0.9843,
+          "duration": "21:27"
+        }
+      ],
+      "test": {
+        "predictions_path": "runs/test_cls_d128_l2_h4_ff512.parquet",
+        "rows": 70000,
+        "accuracy": 0.9859714508056641,
+        "macro_precision": 0.9859746694564819,
+        "macro_recall": 0.9859714508056641,
+        "macro_f1": 0.9859657287597656,
+        "sample_limit_1000_accuracy": 0.959
+      },
+      "latest_epoch": 8,
+      "latest_validation_accuracy": 0.9843,
+      "latest_validation_loss": 0.1027,
+      "best_validation_epoch": 3,
+      "best_validation_accuracy": 0.9854,
+      "best_validation_loss": 0.0641
+    },
+    {
+      "name": "Mean Pooling, 4L, d_model=256, 8H, d_ff=1024",
+      "config_source": "config.py",
+      "config": {
+        "text_context_size": 192,
+        "vocab_size": 30000,
+        "min_token_frequency": 2,
+        "model_dimension": 256,
+        "num_layers": 4,
+        "num_heads": 8,
+        "feed_forward_dimension": 1024,
+        "dropout": 0.1,
+        "pooling": "mean",
+        "batch_size": 64,
+        "num_epochs": 8,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.01,
+        "max_grad_norm": 1.0,
+        "validation_fraction": 0.1,
+        "seed": 561,
+        "optimizer": "AdamW",
+        "loss_function": "CrossEntropyLoss",
+        "device": "mps"
+      },
+      "train_history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.102,
+          "validation_loss": 0.0546,
+          "validation_accuracy": 0.9857,
+          "validation_macro_f1": 0.9857,
+          "duration": "46:52"
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.031,
+          "validation_loss": 0.0561,
+          "validation_accuracy": 0.9862,
+          "validation_macro_f1": 0.9862,
+          "duration": "50:38"
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.0153,
+          "validation_loss": 0.0624,
+          "validation_accuracy": 0.9851,
+          "validation_macro_f1": 0.9851,
+          "duration": "51:45"
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.0072,
+          "validation_loss": 0.079,
+          "validation_accuracy": 0.9835,
+          "validation_macro_f1": 0.9835,
+          "duration": "51:50"
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.0039,
+          "validation_loss": 0.0922,
+          "validation_accuracy": 0.9842,
+          "validation_macro_f1": 0.9842,
+          "duration": "56:56"
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.0028,
+          "validation_loss": 0.0937,
+          "validation_accuracy": 0.9841,
+          "validation_macro_f1": 0.9841,
+          "duration": "51:26"
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.0018,
+          "validation_loss": 0.1125,
+          "validation_accuracy": 0.984,
+          "validation_macro_f1": 0.984,
+          "duration": "52:05"
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.0017,
+          "validation_loss": 0.1133,
+          "validation_accuracy": 0.9844,
+          "validation_macro_f1": 0.9844,
+          "duration": "56:07"
+        }
+      ],
+      "test": {
+        "predictions_path": "runs/test_mean_d256_l4_h8_ff1024.parquet",
+        "rows": 70000,
+        "accuracy": 0.9869142770767212,
+        "macro_precision": 0.9869182705879211,
+        "macro_recall": 0.9869142174720764,
+        "macro_f1": 0.9869082570075989,
+        "correct_rows": 69084,
+        "incorrect_rows": 916
+      },
+      "latest_epoch": 8,
+      "latest_validation_accuracy": 0.9844,
+      "latest_validation_loss": 0.1133,
+      "best_validation_epoch": 2,
+      "best_validation_accuracy": 0.9862,
+      "best_validation_loss": 0.0561
+    },
+    {
+      "name": "CLS Pooling, 4L, d_model=256, 8H, d_ff=1024",
+      "config_source": "train.py",
+      "config": {
+        "text_context_size": 192,
+        "vocab_size": 30000,
+        "min_token_frequency": 2,
+        "model_dimension": 256,
+        "num_layers": 4,
+        "num_heads": 8,
+        "feed_forward_dimension": 1024,
+        "dropout": 0.1,
+        "pooling": "cls",
+        "batch_size": 64,
+        "num_epochs": 8,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.01,
+        "max_grad_norm": 1.0,
+        "validation_fraction": 0.1,
+        "seed": 561,
+        "optimizer": "AdamW",
+        "loss_function": "CrossEntropyLoss",
+        "device": "mps"
+      },
+      "train_history": [
+        {
+          "epoch": 1,
+          "global_step": 7875,
+          "train_loss": 0.1084539015831884,
+          "validation_loss": 0.05912694826349616,
+          "validation_accuracy": 0.9846785664558411,
+          "validation_macro_precision": 0.984698474407196,
+          "validation_macro_recall": 0.9846786260604858,
+          "validation_macro_f1": 0.9846781492233276
+        },
+        {
+          "epoch": 2,
+          "global_step": 15750,
+          "train_loss": 0.03508519305423316,
+          "validation_loss": 0.06094763046749202,
+          "validation_accuracy": 0.9850178360939026,
+          "validation_macro_precision": 0.9850244522094727,
+          "validation_macro_recall": 0.9850178360939026,
+          "validation_macro_f1": 0.9849963784217834
+        },
+        {
+          "epoch": 3,
+          "global_step": 23625,
+          "train_loss": 0.01986754268453464,
+          "validation_loss": 0.06266314210589709,
+          "validation_accuracy": 0.9848928451538086,
+          "validation_macro_precision": 0.9849033355712891,
+          "validation_macro_recall": 0.9848928451538086,
+          "validation_macro_f1": 0.9848928451538086
+        },
+        {
+          "epoch": 4,
+          "global_step": 31500,
+          "train_loss": 0.01096495479620376,
+          "validation_loss": 0.07298139530476848,
+          "validation_accuracy": 0.9841785430908203,
+          "validation_macro_precision": 0.9841734766960144,
+          "validation_macro_recall": 0.9841786026954651,
+          "validation_macro_f1": 0.9841713309288025
+        },
+        {
+          "epoch": 5,
+          "global_step": 39375,
+          "train_loss": 0.006654096879243587,
+          "validation_loss": 0.08557407373559961,
+          "validation_accuracy": 0.984250009059906,
+          "validation_macro_precision": 0.9842907190322876,
+          "validation_macro_recall": 0.984250009059906,
+          "validation_macro_f1": 0.984241783618927
+        },
+        {
+          "epoch": 6,
+          "global_step": 47250,
+          "train_loss": 0.0045274191572047245,
+          "validation_loss": 0.09250669982507992,
+          "validation_accuracy": 0.9836249947547913,
+          "validation_macro_precision": 0.9836539030075073,
+          "validation_macro_recall": 0.9836249947547913,
+          "validation_macro_f1": 0.9836276173591614
+        },
+        {
+          "epoch": 7,
+          "global_step": 55125,
+          "train_loss": 0.003404384515695595,
+          "validation_loss": 0.10155487847101176,
+          "validation_accuracy": 0.9834107160568237,
+          "validation_macro_precision": 0.9834414720535278,
+          "validation_macro_recall": 0.9834107160568237,
+          "validation_macro_f1": 0.9833990931510925
+        },
+        {
+          "epoch": 8,
+          "global_step": 63000,
+          "train_loss": 0.002621155295285274,
+          "validation_loss": 0.10736576894921901,
+          "validation_accuracy": 0.9838749766349792,
+          "validation_macro_precision": 0.9838771820068359,
+          "validation_macro_recall": 0.9838749766349792,
+          "validation_macro_f1": 0.9838594794273376
+        }
+      ],
+      "latest_epoch": 8,
+      "latest_validation_accuracy": 0.9838749766349792,
+      "latest_validation_loss": 0.10736576894921901,
+      "best_validation_epoch": 2,
+      "best_validation_accuracy": 0.9850178360939026,
+      "best_validation_loss": 0.06094763046749202,
+      "test": {
+        "predictions_path": "runs/test_cls_d256_l4_h8_ff1024.parquet",
+        "rows": 70000,
+        "accuracy": 0.9858428835868835,
+        "macro_precision": 0.9858571887016296,
+        "macro_recall": 0.9858428239822388,
+        "macro_f1": 0.9858234524726868
+      }
+    },
+    {
+      "name": "Mean Pooling, 2L, d_model=128, 4H, d_ff=512",
+      "config_source": "train.py",
+      "config": {
+        "text_context_size": 192,
+        "vocab_size": 30000,
+        "min_token_frequency": 2,
+        "model_dimension": 128,
+        "num_layers": 2,
+        "num_heads": 4,
+        "feed_forward_dimension": 512,
+        "dropout": 0.1,
+        "pooling": "mean",
+        "batch_size": 64,
+        "num_epochs": 4,
+        "learning_rate": 0.0005,
+        "weight_decay": 0.01,
+        "max_grad_norm": 1.0,
+        "validation_fraction": 0.1,
+        "seed": 561,
+        "optimizer": "AdamW",
+        "loss_function": "CrossEntropyLoss",
+        "device": "mps"
+      },
+      "train_history": [
+        {
+          "epoch": 1,
+          "global_step": 7875,
+          "train_loss": 0.09284668871933328,
+          "validation_loss": 0.05566499173341851,
+          "validation_accuracy": 0.9852856993675232,
+          "validation_macro_precision": 0.9852833151817322,
+          "validation_macro_recall": 0.9852856993675232,
+          "validation_macro_f1": 0.9852638244628906
+        },
+        {
+          "epoch": 2,
+          "global_step": 15750,
+          "train_loss": 0.030472281865102962,
+          "validation_loss": 0.05778250181558542,
+          "validation_accuracy": 0.9854821562767029,
+          "validation_macro_precision": 0.9854906797409058,
+          "validation_macro_recall": 0.9854821562767029,
+          "validation_macro_f1": 0.9854778051376343
+        },
+        {
+          "epoch": 3,
+          "global_step": 23625,
+          "train_loss": 0.015612370879102926,
+          "validation_loss": 0.06387334066255218,
+          "validation_accuracy": 0.9846071600914001,
+          "validation_macro_precision": 0.9846150279045105,
+          "validation_macro_recall": 0.9846071600914001,
+          "validation_macro_f1": 0.9846034049987793
+        },
+        {
+          "epoch": 4,
+          "global_step": 31500,
+          "train_loss": 0.008080622270871472,
+          "validation_loss": 0.07723069454784438,
+          "validation_accuracy": 0.9838571548461914,
+          "validation_macro_precision": 0.9838867783546448,
+          "validation_macro_recall": 0.9838571548461914,
+          "validation_macro_f1": 0.9838594198226929
+        }
+      ],
+      "latest_epoch": 4,
+      "latest_validation_accuracy": 0.9838571548461914,
+      "latest_validation_loss": 0.07723069454784438,
+      "best_validation_epoch": 2,
+      "best_validation_accuracy": 0.9854821562767029,
+      "best_validation_loss": 0.05778250181558542,
+      "test": {
+        "predictions_path": "runs/test_mean_d128_l2_h4_ff512.parquet",
+        "rows": 70000,
+        "accuracy": 0.9864285588264465,
+        "macro_precision": 0.9864357113838196,
+        "macro_recall": 0.9864285588264465,
+        "macro_f1": 0.986425518989563
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+model_name,epoch,validation_loss,validation_accuracy,validation_macro_precision,validation_macro_recall,validation_macro_f1,is_best_epoch,is_latest_epoch
+"CLS Pooling, 2L, d_model=128, 4H, d_ff=512",2,0.063,0.9849,,,0.9849,0,0
+"CLS Pooling, 2L, d_model=128, 4H, d_ff=512",3,0.0641,0.9854,,,0.9854,1,0
+"CLS Pooling, 2L, d_model=128, 4H, d_ff=512",4,0.0767,0.9841,,,0.9841,0,0
+"CLS Pooling, 2L, d_model=128, 4H, d_ff=512",5,0.0822,0.9849,,,0.9849,0,0
+"CLS Pooling, 2L, d_model=128, 4H, d_ff=512",6,0.0957,0.9843,,,0.9843,0,0
+"CLS Pooling, 2L, d_model=128, 4H, d_ff=512",7,0.1108,0.9835,,,0.9835,0,0
+"CLS Pooling, 2L, d_model=128, 4H, d_ff=512",8,0.1027,0.9843,,,0.9843,0,1

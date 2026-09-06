@@ -1,0 +1,11 @@
+DBpedia 14 dataset source
+=========================
+
+Hugging Face dataset page:
+https://huggingface.co/datasets/fancyzhx/dbpedia_14
+
+Local expected files:
+- data/train.parquet
+- data/test.parquet
+
+The project uses the official train split for local train/validation splitting and the official test split only for final evaluation.

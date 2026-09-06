@@ -1,0 +1,9 @@
+model_name,epoch,validation_loss,validation_accuracy,validation_macro_precision,validation_macro_recall,validation_macro_f1,is_best_epoch,is_latest_epoch
+"Mean Pooling, 4L, d_model=256, 8H, d_ff=1024",1,0.0546,0.9857,,,0.9857,0,0
+"Mean Pooling, 4L, d_model=256, 8H, d_ff=1024",2,0.0561,0.9862,,,0.9862,1,0
+"Mean Pooling, 4L, d_model=256, 8H, d_ff=1024",3,0.0624,0.9851,,,0.9851,0,0
+"Mean Pooling, 4L, d_model=256, 8H, d_ff=1024",4,0.079,0.9835,,,0.9835,0,0
+"Mean Pooling, 4L, d_model=256, 8H, d_ff=1024",5,0.0922,0.9842,,,0.9842,0,0
+"Mean Pooling, 4L, d_model=256, 8H, d_ff=1024",6,0.0937,0.9841,,,0.9841,0,0
+"Mean Pooling, 4L, d_model=256, 8H, d_ff=1024",7,0.1125,0.984,,,0.984,0,0
+"Mean Pooling, 4L, d_model=256, 8H, d_ff=1024",8,0.1133,0.9844,,,0.9844,0,1

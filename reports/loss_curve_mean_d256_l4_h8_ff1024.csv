@@ -1,0 +1,9 @@
+model_name,epoch,train_loss,validation_loss,is_best_epoch,is_latest_epoch
+"Mean Pooling, 4L, d_model=256, 8H, d_ff=1024",1,0.102,0.0546,0,0
+"Mean Pooling, 4L, d_model=256, 8H, d_ff=1024",2,0.031,0.0561,1,0
+"Mean Pooling, 4L, d_model=256, 8H, d_ff=1024",3,0.0153,0.0624,0,0
+"Mean Pooling, 4L, d_model=256, 8H, d_ff=1024",4,0.0072,0.079,0,0
+"Mean Pooling, 4L, d_model=256, 8H, d_ff=1024",5,0.0039,0.0922,0,0
+"Mean Pooling, 4L, d_model=256, 8H, d_ff=1024",6,0.0028,0.0937,0,0
+"Mean Pooling, 4L, d_model=256, 8H, d_ff=1024",7,0.0018,0.1125,0,0
+"Mean Pooling, 4L, d_model=256, 8H, d_ff=1024",8,0.0017,0.1133,0,1

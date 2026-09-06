@@ -1,0 +1,2 @@
+model_name,best_validation_epoch,best_validation_accuracy,latest_epoch,latest_validation_accuracy,test_rows,test_accuracy,test_macro_precision,test_macro_recall,test_macro_f1,predictions_path
+"Mean Pooling, 2L, d_model=128, 4H, d_ff=512",2,0.9854821562767029,4,0.9838571548461914,70000,0.9864285588264465,0.9864357113838196,0.9864285588264465,0.986425518989563,runs/test_mean_d128_l2_h4_ff512.parquet

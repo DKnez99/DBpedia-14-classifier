@@ -1,0 +1,2 @@
+model_name,best_validation_epoch,best_validation_accuracy,latest_epoch,latest_validation_accuracy,test_rows,test_accuracy,test_macro_precision,test_macro_recall,test_macro_f1,predictions_path
+"CLS Pooling, 4L, d_model=256, 8H, d_ff=1024",2,0.9850178360939026,8,0.9838749766349792,70000,0.9858428835868835,0.9858571887016296,0.9858428239822388,0.9858234524726868,runs/test_cls_d256_l4_h8_ff1024.parquet

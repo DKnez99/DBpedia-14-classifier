@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local environment
+.venv/
+.venv*/
+.env
+
+# OS / IDE
+.DS_Store
+.idea/
+
+# Tool caches
+.cache/
+
+# Large local data and generated artifacts
+data/*.parquet
+checkpoints/*.pt
+!data/.gitkeep
+!data/DBPEDIA_SOURCE.txt
+tokenizers/*
+!tokenizers/.gitkeep
+!tokenizers/dbpedia_text_tokenizer.json
+runs/*
+!runs/.gitkeep
+
+# Machine-specific generated report metadata
+reports/environment.json
+reports/metrics_summary.json
